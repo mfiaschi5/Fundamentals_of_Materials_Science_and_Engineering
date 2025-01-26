@@ -1,0 +1,168 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage{epigraph}
+\usepackage[a4paper, margin=2cm]{geometry} % Imposta i margini a 2cm
+\title{Fundamentals Of Materials Science and Engineering}
+\author{Leonardo Sabattini (I edizione)\\
+Matteo Fiaschi, Thomas Spinelli, Nicola Steffenato (II edizione)}
+\date{MAI}
+\pagestyle{fancy}
+\fancyhead[L]{Materials \& Nanotechnology} % Intestazione a sinistra
+\fancyhead[C]{Fundamentals of Material Science and Engineering} % Intestazione al centro
+\fancyhead[R]{A.A. 2023/24 - 2024/25} % Intestazione a destra
+\fancyfoot[L]{Leonardo Sabattini et al.} % Piè di pagina a sinistra
+\fancyfoot[C]{\thepage} % Numero di pagina al centro del piè di pagina
+\fancyfoot[R]{l.sabattini@studenti.unipi.it} % Piè di pagina a destra
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Queste dispense raccolgono le nostre bestemmie contro l'ingegneria industriale. Siano lodati Gallone e Milazzo che sono almeno comprensibili quando spiegano. Sappiate l'acciaio perché all'esame lo chiedono letteralmente a tutti
+\end{abstract}
+
+\section{Proprietà meccaniche \& Prova di Trazione}
+
+\input{Proprietà_meccaniche/proprietà_meccaniche}
+
+\input{struttura/struttura}
+
+\input{Diagrammi di fase/diagrammi_fase}
+
+\input{acciaio e transizioni di fase/acciaio}
+
+\input{frattura/frattura}
+
+\input{ceramici/ceramici}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Compositi}
+
+\epigraph{Infine è particelle di SiC o Allumina diametro di qualche micron per aumentare la rigidezza del metallo}{\textit{Leonardo Sabattini}, I edizione}
+
+I materiali compositi sono formati da due o più materiali differenti. Un composito è di solito costituito da: 
+\begin{itemize}
+    \item un \textbf{\textit{filler}} (o \textit{riempitivo}) che ha la funzione di rinforzo, è aggiungo come fibra o come particelle. È il componente che andrà  sostenere gli sforzi meccanici.
+    \item  una \textit{\textbf{matrix}} (o \textit{matrice}) che ricopre completamente il filler, ha il compito di unire e trasferire lo stress all'altra fase.
+\end{itemize}
+La forza dei materiali compositi è la capacità di presentare proprietà intermedie tra i due materiali che lo costituiscono ma complessivamente superiori. Le proprietà finali dipendono da molti fattori: il rapporto matrice/filler, la struttura del filler (fibre continue o discontinue, particellare) ed anche i metodi di lavorazione (spesso questa classe di materiale è fortemente anisotropa). 
+La classificazione dei compositi dipende dal tipo di matrice usata:
+\begin{itemize}
+\item \textbf{\textit{Polymeric matrix composites (PMC)}}. Ne esistono diversi tipi, un esempio sono le fibre di vetro ottenute a partire dalle resine insature di poliestere e le fibre di carbonio o kevlar resine epossidiche. Le proprietà di questa classe di compositi possono avere direzionalità specifiche in quanto spesso composto da fibre. Ovviamente anche il metodo di produzione influisce: è possibile limitare l'anisotropia facendo in modo che l'orientazione delle fibre sia multidirezionale (ad esempio tramite stacking di piani di fibre orientate ad angoli diversi). Le fibre di vetro sono prodotte da particolari tipi di vetro con alto contenuto di ossido di alluminio (15\%); in base a come sono intrecciate si ha una differente resistenza. Le fibre di carbonio sono ottenute dal PAN (poliacrilonitrile). Dopo un trattamento a 200-400°C per ossidare le fibre di PAN si ha una pirolisi a 400-600°C in atmosfera inerte o a 600-1500°C per avere delle fibre grafitiche. La grafitizzazione che si ottiene a 1800°C aumenta il grado di orientamento dei cristalliti (?). L'ultima classe di PMC molto importanti sono le fibre aramidiche che trovano impiego sopratutto per la produzione di oggetti protettivi sia dalle alte temperature sia dagli urti (antiproiettili ad esempio). Hanno una basse densità, si deconpongono a T elevata e hanno una buona resilienza e forza meccanica. Sono fatte a partire da poliammidi aromatiche. 
+ 
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Materiale}  & \textbf{Resistenza ($MPa$)} & \textbf{Modulo di Young ($GPa$)}  \\ \midrule
+Poliestere & 40 - 90  & 55 - 130  \\
+Resina epossidica & 55 - 130 & 2.8 - 4.2 \\
+Fibra di vetro-poliestere (intrecciata) & 206 - 344 & 103 - 310 \\
+Fibra di carbonio (unidirezionale)-Resina Epossidica & 1860 (65 a 90°) & 145 (9.4 a 90°) \\ \bottomrule
+\end{tabular}
+\caption{Proprietà meccaniche di alcuni PMC}
+\label{tab:resine}
+\end{table}
+
+\item \textbf{\textit{Metallic matrix composites (MMC)}}. Anche di questa classe ne esistono di vario tipo: fibre continue, fibre discontinue o particellari. Le fibre continue come fibre di ossido di alluminio, grafite, tungsteno, boro o SiC si ottengono pressando queste lamine a caldo direttamente sul metallo e servono per aumentarne la rigidità e resistenza meccanica. Questa cosa è sopratutto usata per le fibre leggere nel settore aerospaziale. Un altro tipo sono le fibre discontinue come i "whiskers" di SiC (diametro di qualche micron e lunghezza di diverse decine); queste si ottengono per hot pressing, aggiunta di polveri ed estrusione o infiltrazione nei metalli fusi, anche qui si osserva un aumento della resistenza meccanica e della rigidezza. Infine è possibile utilizzare particelle di SiC o allumina diametro di qualche micron per aumentare la rigidezza del metallo. In fibre di alluminio continue si arrivano a valori di Tensile Strength di 1500 MPa e modulo elastico di 220 GPa ma un allungamento massimo di 0.810\&, le fibre discontinue e particolare arrivano a circa 500 MPa e 120 GPa con allungamenti di pochi punti percentuali mentre i materiali privi di rinforzo hanno Tensile strength inferiore a 500 MPa e modulo elastico inferiore ai 100 GPa ma un allungamento del 10\%.
+
+\item Ceramic matrix composites (CMC). Anche nelle fibre ceramiche si aggiunge fibre continue di SiC (\textcolor{red}{chiedere come sono le fibre continue di SiC} o ossido di alluminio o paricelle e Whiskers di SiC con un conseguente aumento della resistenza meccanica e resistenze alle frattura. Vengono aggiunte per CVD o hot pressing. Servono sopratutto a modificare ed arginare la propagazione delle crepe all'interno del materiale e formare dei ponti tra le crepe.
+\end{itemize}
+
+\subsection{Comportamento meccanico}
+
+Il tipico comportamento meccanico dei compositi inizia con un comportamento elastico sia da parte del filler che della matrice: questi tendono ad allungarsi fino a quando uno dei due (di solito la matrice) entra in regime plastico e quindi si osserva un cambio di pendenza nel grafico stress-strain. Una volta raggiunto l'allungamento massimo del filler il composito inizia a cedere senza avere un cedimento della struttura netto e catastrofico in quanto il filler è ancora nel regime plastico. Inoltre un altro vantaggio è che le crepe non si propagano in tutto il filler ma sono limitate dalla matrice. \textcolor{red}{RISISTEMARE CHE LEO L'HA SCRITTA ALLA CAZZO DI CANE}
+
+In generale la risposta meccanica del materiale dipende dalla composizione del materiale anche perché le forze esterne sono trasmesse dalla matrice al filler attraverso le forze di taglio. Per materiali binari avremo:
+\begin{equation}
+    E_c=E_fV_f+E_mV_m
+\end{equation}
+Dove V$_m$ e V$_f$ sono le frazioni in  e $E_c$ è il modulo di Young del composito.
+Esistono due regimi in cui può lavorare un composito: il primo è il regime di \textbf{\textit{isostrain}} (Fig \ref{isostress-isostrain}  sinistra) in cui  entrambi i materiali sono sottoposti allo stesso allungamento, un questo caso si ha che $\epsilon_f=\epsilon_m=\epsilon_{c}$ ed inoltre si ha $P_f+P_m=P_c$, il carico sarà dunque distribuito secondo la seguente formula.
+\begin{equation}
+    \frac{P_f}{P_m}=\frac{\sigma_fA_f}{\sigma_mA_m}=\frac{\epsilon_fE_fA_f}{\epsilon_mE_mA_m}=\frac{E_fA_f}{E_mA_m}
+\end{equation}
+Nelle condizioni di \textbf{\textit{isostress}} (Fig \ref{isostress-isostrain} destra) invece la direzione della forza è ortogonale al piano della fibra si hanno condizioni diverse: $\sigma_c=\sigma_f=\sigma_m$; $\Delta l_c=\Delta l_f+\Delta l_m$. In questo caso si ha:
+\begin{equation}
+    \frac{1}{E_C}=\frac{V_f}{E_f}+\frac{V_m}{E_m}
+\end{equation}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{isostress-isostrain.png}
+    \caption{Condizione di isostress ed isostrain.}
+    \label{isostress-isostrain}
+\end{figure}
+
+La frattura nei compositi è un processo complesso in quanto spesso si ha una matrice duttile e un filler fragile e resistente. In genere durante la deformazione il materiale duttile si comprime e gli eventuali vuoti tra le interfacce dei due materiali scompaiono. Quando lo stress si trasmette dalla matrice al filler ed il filler inizia a deformarsi, il materiale non riesce più a deformarsi efficacemente e la fibra inizia a rompersi in maniera fragile. Se il legame è debole si possono creare dei vuoti tra le fibre e la matrice (cavitazione). Infine se lo stress è applicato in maniera ortogonale alle lamine si può avere delaminazione comportando la rottura del materiale.
+Nel caso del calcestruzzo o di altri compositi formati da particelle grosse disperse il meccanismo è diverso in quanto il rafforzamento è dato dall'ostruzione della matrice; per particelle fini invece queste agiscono sul movimento delle dislocazioni impedendolo, come accade nel caso del precipitation hardening anche se con effetti minori.
+Nel caso di fibre, il suo comportamento dipende dalla direzione e dalla lunghezza di queste, quando la lunghezza è corta e l'orientazione è randomica l'efficienza è minore e le proprietà peggiori. Le fibre possono anche trovarsi sotto forma di whiskers (cristalli praticamente perfetti) e mostrano i valori massimi di resistenza ottenibile essendo quasi del tutto privo di difetti.
+
+\subsection{Metodi di lavorazione}
+
+\epigraph{i nostri materiali messi a panino vengono compressati a T e P elevata unire il filler e la matrice.}{\textit{Leonardo Sabattini}, I edizione}
+
+Molti manufatti compositi sono ottenuti per stampaggio seguito da essiccamento all'aria (\textbf{\textit{open molding}}).
+\begin{itemize}
+    \item \textbf{\textit{Hand lay-up}}: il materiale viene colato in uno stampo aperto. Le resine o fibre aderiscono alla superficie prendendo la forma dello stampo.
+    \item \textbf{\textit{Spray lay-up}}: il materiale viene colato in uno stampo aperto depositato attraverso uno spray; questa tecnica è preferita quando si vogliono avere fibre sottili. Eventuale aria residua viene eliminata con rulli o attraverso processi simili, anche qui segue essiccamento a temperatura ambiente o superiore.
+    \item \textbf{\textit{Vacuum Bag-Autoclave}}: viene principalmente usato per fare lamine dalle elevate proprietà tecnologiche. Le resine già cariche di filler \textcolor{red}{chiedere a milazzo}. Dovrebbe consistere in fogli di resina carichi di fibre che una volta in autoclave a T elevata comporta l'unione dei due pezzi.
+    \item  \textbf{\textit{Filament winding}}: consiste nell'intrecciare fili di fibra saturi di resina in modo da ricoprire una superifice i quali induriranno quando esposti all'aria.
+\end{itemize}
+Un'altra classe di lavorazioni la si ha quando si lavora al chiuso (\textbf{\textit{closed molding}}):
+\begin{itemize}
+    \item \textbf{\textit{Compression molding and transfer molding}}: i due componenti messi a panino vengono pressati assieme a T e P elevata per unirli in maniera permanente.
+    \item \textbf{\textit{Resin transfer molding}}: è simile al precedente ma se prima si pressavano assieme lamine diverse ora si inietta all'interno dello stampo la resina liquida che andrà a legare al filler.
+    \item \textbf{\textit{Sheet-molding compound (SMC)}}: in questo processo lamine differenti vengono pressate attraverso rulli e riscaldate.
+    \item \textbf{\textit{Reinforced Reaction Injection Molding (RRIM)}}: in questo processo due o più resine vengono scaldate separatamente e poi unite a fibre di vetro macinate. La miscela viene iniettata in uno stampo ad alta pressione e le si lascia prendere la forma dello stampo.
+    \item \textbf{\textit{Pultrusione}}: viene utilizzata per produrre manufatti in forma allungata come barre o filamenti. Prevede di far passare un filamento continuo di filler in un bagno di resina per saturarlo e successivamente attraverso acciaio riscaldato.
+\end{itemize}
+
+\newpage
+
+\section{Cemento}
+
+Il cemento è un ceramico, il calcestruzzo e il cemento armato invece sono compositi. Il cemento è fatto da una polvere contenente silicati di calcio e alluminati:
+3CaOSiO$_2$ silicato tricalcico, 2CaOSiO$_2$ silicato bicalcico, 3CaOAl$_2$O$_3$, 4CaOAl$_2$O$_3$Fe$_2$O$_3$. Alla polvere viene aggiunta acqua per creare la malta (che spesso non presenta proprietà adeguate ma comunque si può usare per elementi che non sono sottoposti a particolare carichi).
+Aggiungendo degli aggregati di grana grossa, come bricciolino o pietre, e di grana fine, come la sabbia, si ottiene il calcestruzzo. L'acqua aggiunta funge da legante trasformando i silicati in silicati idrati e idrossidi:
+$$2C_3S+6H_2O\rightarrow C_3S_2\cdot3H_2O+3Ca(OH)_2$$ 
+Il cemento è un legante idraulico e ha bisogno di subire un processo di solidificazione durante la quale si essicca. Dopo la solidificazione abbiamo il calcestruzzo. La cinetica di solidificazione dipende dalla scelta di composizione (\textbf{\textit{mix design}})) la quale viene scelta in base alla classe di resistenza, alla classe di esposizione, dimensione degli aggregati ed al rapporto acqua/cemento, che deve essere superiore a 0.2 (di solito è compreso tra 0.4 e 0.5). Poca acqua porta a legami incompleti e maggiore fragilità, troppa acqua a porosità troppo elevata.
+Esistono 5 tipi di cemento \textcolor{red}{QUANDO L'HA FATTO?}
+\begin{itemize}
+    \item Cemento ordinario
+    \item Cemento resistente ai solfati
+    \item Cemento presa rapida, il calcestruzzo normalmente è pronto dopo 28 gg; ovviamente l'essiccamento rapido si ripercuote sulle proprietà del materiale e risulta più soggetto a fessurazioni.
+    \item Cemento a basso calore di idratazione, che viene usato per le grandi opere per evitrare la fessurazione
+    \item Cemento molto resistente ai solfati
+\end{itemize}
+I solfati sono chimicamente pericolosi per il cemento; inoltre il cemento non ha proprietà meccaniche eccezionali, essendo un ceramico, il calcestruzzo invece cede all'interfaccia con il filler. Di solito sul cemento, oltre ai soliti test di compressione e tensione, vengono effettuati altre prove: uno per controllare il rapporto acqua-cemento, il test a 45° e la prova di flessione. Il modulo elastico del cemento è calcolato a partire dalla classe di resistenza: $R_{ck}$:
+\begin{equation}
+    E_c=5700\sqrt{R_{ck}}
+\end{equation}
+
+\subsection{Calcestruzzo armato}
+
+Il calcestruzzo armato è ottenuto rinforzando il calcestruzzo con barre d'acciaio per compensare la scarsa resistenza a tensione. La loro quantità dipende dal carico previsto:
+\begin{itemize}
+    \item Presentano spesso una forma elicoidale per aumentare la superficie e dunque la presa.
+    \item Lo spazio tra interfaccia e le colonne di ferro è detta copriferro ed è molto importante in quanto evita l'ossidazione dell'acciaio e dunque il cedimento del pezzo.
+    \item I rinforzi sono fatti di comune acciaio da costruzione, in ogni caso la prima cosa a cedere è l'interfaccia. 
+\end{itemize}
+Una cosa che si deve considerare è a presenza di eventi sismici in quanto sottopone il materiale a flessione.
+Esistono due metodi per preparare il calcestruzzo:
+\begin{itemize}
+    \item Calcestruzzo armato precompresso: viene preparato in casseforme dove sono presenti delle barre d'acciaio d'acciaio tirate. Quanto il cemento viene rimosso dalla cassaforma l'acciaio tende a ritirarsi creando uno strato di compressione nel calcestruzzo aumentandone la resistenza in flessione (i ceramici non hanno buone resistenza in trazione).
+    \item post-teso: il pezzo viene preparato colando il calcestruzzo in una cassaforma dove sono presenti le barre d'acciaio ricoperte da guaine e lasciate solidificare. Una volta pronto vengono tirate le barre d'acciaio lasciando uno stato di tensione e introducendo la malta nelle guaine 
+\end{itemize}
+
+\input{Materiali Polimerici/Materiali_polimerici}
+
+\input{materiali_polimerici_viscoelasticità/p1}
+
+\end{document}
+

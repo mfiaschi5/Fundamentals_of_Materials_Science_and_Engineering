@@ -1,0 +1,169 @@
+\newpage
+
+\section{Frattura}
+
+La frattura è ovviamente un evento che in ingegneria viene sempre cercato di evitare, è dunque molto importante la previsione del materiale sottoposto a sforzi per evitare che ciò accada. La modalità di frattura dipende dal tipo di materiale; esistono due tipi:
+\begin{itemize}
+    \item \textbf{\textit{Frattura fragile}}: la frattura fragile avviene in maniera improvvisa con la creazione di una frattura che si espande in maniera rapida senza dare nessun segno di avviso.
+    \item \textbf{\textit{Frattura duttile}}: questo tipo di frattura è caratterizzata da un elevato di deformazione plastica che anticipa la rottura e che segue la crepa; inoltre è un processo più lento e stabile.
+\end{itemize}
+
+\subsection{Frattura duttile}
+
+La frattura duttile è caratterizzata da deformazione plastica con conseguente riduzione dell'area (questo fenomeno è anche chiamato \textbf{\textit{necking}} (o strizione) ed anticipa la frattura del nostro provino. Durante lo sforzo si ha la formazione di micro-vuoti che tendono ad allargarsi ed unirsi. 
+In vicinanza ai bordi, prima della rottura, la crepa inizia a seguire un angolo di 45° (che massimizza le forze di taglio); da qui viene la tipica forma "cup and cone" mostrata in figura \ref{cupcone}. Spesso questo comportamento è anche esibito da materiali in forma fibrosa.
+
+\begin{figure}[h]
+    \begin{minipage}[b]{0.45\textwidth}
+    
+    \centering
+    \includegraphics[height=6cm]{frattura/cup and cone.png}
+
+    \label{cupcone}
+    \end{minipage}
+    \begin{minipage}[b]{0.45\textwidth}
+    
+    \centering
+    \includegraphics[height=6cm]{frattura/brittle.png}
+    \label{cupcone}
+    \end{minipage}
+    \caption{Sinistra: frattura "cup and cone". Destra: frattura fragile.}
+\end{figure}
+
+\subsection{Frattura fragile}
+
+La frattura fragile avviene in maniera estremamente rapida in assenza di deformazioni plastiche apprezzabili. Il piano di separazione è spesso perpendicolare alla direzione in cui è applicata la forza, con la presenza di linee che si espandono radialmente dalla crepa iniziale, spesso di forma granulare. La frattura duttile può essere di due tipi: 
+\begin{itemize}
+    \item \textbf{\textit{transgranulare}}: se la frattura si propaga in mezzo al grano. In questo tipo di rottura si ha la rottura dei legami atomici e la superficie appare granulosa. La frattura segue piani reticolari precisi (quelli a densità più elevata).
+    \item \textbf{\textit{intergranulare}}: segue i bordi di grano. Dalla superficie è possibile vedere questi bordi di grano.
+\end{itemize}
+Come visto in preferenza, la frattura fragile è favorita a basse temperature.
+
+\subsection{Test}
+
+\epigraph{Ci sono alcuni valori che vanno considerati per la progettazione di affari}{\textit{Leonardo Sabattini}, I edizione}
+
+La dinamica della frattura è molto complicata in quanto il fenomeno dipende da tantissimi fattori come:
+\begin{itemize}
+    \item Qualità della superficie.
+    \item Microstruttura cristallina.
+    \item Tipo di sforzo a cui è sottoposto il campione.
+    \item Presenza di crepe o imperfezioni interne.
+    \item Presenza di corrosione o di altre difetti dovuti all'attacco di altre sostanze chimiche.
+    \item Temperatura.
+    \item Design.
+\end{itemize}
+Esistono più metodi per studiare la frattura. La prima consiste in un provino in cui è presente un'asola di lunghezza molto minore della lunghezza del campione. Questa asola andrà a simulare la presenza di una crepa all'interno del campione. La crepa gioca in generale un ruolo molto importante nel processo di rottura, specialmente nella rottura fragile: se si osservano le linee di forza (fig. \ref{crack}) si avrà un'intensificazione di queste ultime in prossimità della frattura facendo diminuire molto lo stress richiesto per arrivare la rottura. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{frattura/craks.png}
+    \caption{Linee di forze in prossimità di un difetto.}
+    \label{crack}
+\end{figure}
+
+Ci sono alcuni valori che vanno tenuti in considerazione per la progettazione di manufatti:
+
+\begin{equation}
+    \sigma_c=2\sigma\left(\sqrt{\frac{a}{\rho}}\right)
+\end{equation}
+
+Dove \textit{a} è la lunghezza dell'asola e $\rho$ è la curvatura dell'ellisse:
+
+\begin{equation}
+    \rho = \frac{2 a^2}{b}
+    \label{eq_curvatura}
+\end{equation}
+
+Dove $b$ è l'altezza della cricca\footnote{$\rho$ rappresenta la curvatura dell'ellisse, ossia il rapporto tra il quadrato del semiasse maggiore ed il semiasse minore. Qui infatti abbiamo indicato con $a$ la lunghezza della cricca (semiasse maggiore) e con $b$ l'altezza della stessa (asse minore), da cui l'equazione \ref{eq_curvatura}}.
+Il rapporto con $\sigma$ rappresenta il fattore di intensificazione.
+È inoltre comune eseguire un test di trazione con un provino simile al precedente in cui è presente una cricca durante il quale si misura:
+
+\begin{equation}
+    K_I=Y\sigma\sqrt{\pi a}
+\end{equation}
+
+Dove \textit{a} è la dimensione dell'imperfezione e \textit{Y} è un parametro che dipende dal materiale. il valore di $K_I$ dipende da diversi fattori, strain rate incluso. Si va a confrontare con un valore tabulato $K_{IC}$; se $K_I$ è maggiore la frattura si propagherà, altrimenti no. Non solo crepe e difetti hanno l'effetto di aumentare localmente lo stress: anche la forma del campione è importante in quanto un design "spigoloso" agisce proprio come una crepa, un'intensificazione della forza nei punti in prossimità dello spigolo favorendo la rottura.
+
+\subsection{Creep}
+
+La temperatura ha un effetto molto importante sulle proprietà dei materiali. In parte questa cosa è stata discussa nel capitolo 1, in parte viene anche discussa nel capitolo sui materiali polimerici. In generale il comportamento dei materiali ad elevata temperatura (1/2 per i metalli puri, 1/3 per le leghe) è differente a cause dei moti diffusivi che sono presenti all'interno del nostro materiale ed a causa di un differente punto di snervamento. I test per lo studio del creep viene fatto a T controllata l'interno di un forno. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{frattura/creep testing.jpg}
+    \caption{Strain in funzione del tempo.}
+    \label{creep testing}
+\end{figure}
+Durente il test è possibile osservare che:
+\begin{itemize}
+    \item Si ha un immediato aumento dello strain dovuto al comportamento elastico del materiale. Questo è seguita da una zona con una diminuzione del creep strain a causa dell'incrudimento.
+    \item Si ha un seconda zona lineare in cui l'effetto dell'incrudimento e del recovery si eliminano a vicenda.
+    \item Nel creep terziario la deformazione aumenta siccome ulteriori deformazioni non possono più eliminarsi tra loro.
+\end{itemize}
+Aumentando la temperatura o lo stress a cui è svolta la prova si osserva che la parte lineare diminuisce sempre più aumentando la sua pendenza. Diminuendo molto T e scendendo a valori molto al di sotto della T$_m$ si osserva che la parte lineare è  piatta.
+Il tasso di deformazione segue una legge del tipo di Arrhenius:
+\begin{equation}
+    \frac{d\epsilon}{dt}=K_1\sigma^n\exp-\left(\frac{Q_e}{KT}\right)
+\end{equation}
+
+\subsection{Fatica}
+
+Un'altra situazione che va attentamente studiata è quando il carico non è statico ma è dinamico, in quanto il pezzo potrebbe cedere anche se sottoposto a carichi molto al di sotto del punto di snervamento.
+Il test consiste nel sottoporre in maniera ciclica a tensione e compressione, assieme a ciò gli si può aggiungere o meno un carico statico (cioè avere uno stress medio diverso da zero). Questa prova sarà determinata principalmente da due valori: $\sigma_m=\frac{\sigma_{max}+\sigma_{min}}{2}$ (causa strain hardening aumentano il numero di cicli necessari per la rottura) e $\sigma_r=\sigma_{max}-\sigma_{min}$.
+Da questa prova si ottengono le curve di Woehler, da cui si rapporta la tensione in funzione del numero di cicli che riesce a supportare prima di cedere data una certa probabilità.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{frattura/Curva_wohler.jpg}
+    \caption{Curva di Woehler.}
+    \label{Curva_wohler}
+\end{figure}
+
+Gli acciai si dimostrano ancora una volta eccezionali e spesso esibiscono un asintoto detto limite di fatica, le leghe leggere no. In generale la prova dipende da moltissimi fattori: forma del provino, stress medio e qualità delle superfici (la frattura iniziale spesso avviene alle superfici) e temperatura. Per migliorare la qualità e la durezza delle superfici si possono utilizzare varie tecniche:
+\begin{itemize}
+    \item \textbf{\textit{La pallinatura}}: si colpisce il campione con delle sferette molto dure in modo da provocare alla superficie dello strain hardening e quindi indurire.
+    \item \textbf{\textit{Processi chimico-fisici}}: si può legare o diffondere alla superficie del nostro materiale una sostanza che diffondendosi o legandosi chimicamente alla superficie ne aumenta la durezza; un esempio sono la carburazione dell'acciaio o la nitrazione.
+\end{itemize}
+Anche la temperatura può provocare fatica, in quanto cambi di temperature comportano dilatazioni e contrazioni.
+
+\subsection{Corrosione ed elettrochimica}
+
+Un'altra fonte di difetti e di indebolimento strutturale è la corrosione ovvero l'attacco da parte di agenti chimici esterni. Data una specie ossidante (Ox) ed una riducente (Rd):
+$$Ox_{ox}+Rd_{rd}\rightarrow Ox_{rd}+Rd_{ox}$$
+In generale la spontaneità del processo dipende dall'equazione di Nerst:
+\begin{equation}
+    \Delta V=\Delta V_0+\frac{nFe}{RT}ln\frac{[Ox]}{[Rd]}
+\end{equation}
+Dove $n$ è il numero di elettroni scambiati e $\Delta V_0$ è il potenziale di riduzione standard; non è comunque detto che un processo spontaneo avvenga effettivamente in quanto occorre sempre considerare la cinetica. Nei processi elettrochimici sperimentalmente bisogna considerare anche i \textbf{\textit{sovrapotenziali}} ($\eta$):
+\begin{equation}
+    E=E_0+\eta
+\end{equation}
+La natura dei sovrapotenziali può essere di vario tipo, tra cui fenomeni dispendiosi energeticamente che avvengono all'interfaccia (come lo scambio di elettroni o l'adsorbimento di specie in superficie), fenomeni dovuti a gradienti di concentrazione o da una diversa mobilità degli ioni in soluzione.
+Una formula del sovrapotenziale di concentrazione è data dalla relazione di Toefel:
+\begin{equation}
+    V=\pm\beta\ln\left(\frac{i}{i_0}\right)
+\end{equation}
+$\beta$ e $i_0$ sono entrambi parametri tipici della coppia redox, l'ultima è la corrente che si ha in condizioni di equilibrio quando tanta specie si riduce e tanta se ne ossida (cioè la corrente prodotta dall'ossidazione che è uguale a quella della riduzione con una corrente totale nulla, viene definita prendendone solo una delle due). In generale in condizioni stazionarie non si deve avere accumulo di carica, pertanto potenziale e corrente devono essere uguali, la condizione è dunque quando le due curve si intersecano \textcolor{red}{EH?}. Quel punto è chiamato \textit{\textbf{corrente di corrosione}} (Fig \ref{passivation}, sinistra).
+Per proteggere il pezzo dalla corrosione esistono vari metodi, ad esempio:
+\begin{itemize}
+    \item La \textbf{\textit{passivazione}}: molti materiali metallici creano uno strato di ossido superficiale che protegge il pezzo da ulteriore degradazione modificando le curve come mostrato a destra di fig. \ref{passivation}. Non tutti gli ossidi hanno questa proprietà: nel caso del ferro si forma un ossido che si trasforma in Fe$_2$O$_3\cdot$H$_2$O, la ruggine, che ha pessime proprietà meccaniche e tende a staccarsi dal manufatto.
+    \item Si può usare un anodo sacrificale, ovvero un materiale che ha un potenziale di riduzione minore del materiale che vogliamo proteggere in modo che si lui ad ossidarsi rispetto il nostro materiale.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{frattura/tafel.png} % Sostituisci "immagine1" con il nome del tuo primo file immagine e la sua estensione
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{frattura/passivation.png} % Sostituisci "immagine2" con il nome del tuo secondo file immagine e la sua estensione
+        
+    \end{minipage}
+    \caption{Sinistra: relazioni di Tafel, Destra: effetto della passivazione}
+    \label{passivation}
+\end{figure}
+
+La corrosione dipende da molti fattori, ad esempio temperatura, che di solito ne aumenta la velocità, presenza di umidità (l'ossidazione del ferro avviene solo in presenza di acqua), e concentrazione di protoni. La corrosione nel caso del ferro avviene per areazione differenziale: all'interno della goccia di acqua non si ha una concentrazione uniforme di ossigeno, ma cambia a seconda dalla distanza dell'interfaccia. Questo gradiente di concentrazione assieme alla presenza di protoni causa l'ossidazione del ferro nelle zone in cui la concentrazione di ossigeno è maggiore. Un'altra fonte di corrosione sono le giunzioni con metalli più nobili, dove essenzialmente il metallo nobile funge da anodo sacrificale.
